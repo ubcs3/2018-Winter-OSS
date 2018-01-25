@@ -15,7 +15,7 @@ We use free open source software in our data science, machine learning and scien
 
 #### SCHEDULE
 
-Our open source software seminar meets every **Thursday 4-5pm in LSK 121**. Please join the [UBCS3 mailing list](https://ubc.ca1.qualtrics.com/jfe/form/SV_6VCa1EYL5xjlUQ5) to receive weekly updates about the seminar.
+Our open source software seminar meets every **Thursday 3-4pm in LSK 121**. Please join the [UBCS3 mailing list](https://ubc.ca1.qualtrics.com/jfe/form/SV_6VCa1EYL5xjlUQ5) to receive weekly updates about the seminar.
 
 | Date | Topic | Notebook | Presenter |
 | :---: | :---: | :---: | :---: |
