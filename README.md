@@ -19,7 +19,7 @@ Our open source software seminar meets every **Thursday 4-5pm in LSK 121**. Plea
 
 | Date | Topic | Notebook | Presenter |
 | :---: | :---: | :---: | :---: |
-| January 25 | Introduciton to Open Source Software (and SymPy) |  | [@patrickwalls](https://github.com/patrickwalls) |
+| January 25 | Introduction to Open Source Software (and SymPy) |  | [@patrickwalls](https://github.com/patrickwalls) |
 | February 1 | Git and GitHub Basics | | [@patrickwalls](https://github.com/patrickwalls) |
 | February 8 |  | | |
 | February 15 |  | | |
