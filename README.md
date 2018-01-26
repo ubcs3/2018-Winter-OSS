@@ -17,10 +17,10 @@ We use free open source software in our data science, machine learning and scien
 
 Our open source software seminar meets every **Thursday 3-4pm in LSK 121**. Please join the [UBCS3 mailing list](https://ubc.ca1.qualtrics.com/jfe/form/SV_6VCa1EYL5xjlUQ5) to receive weekly updates about the seminar.
 
-| Date | Topic | Notebook | Presenter |
-| :---: | :---: | :---: | :---: |
-| January 25 | Introduction to Open Source Software (and SymPy) |  | [@patrickwalls](https://github.com/patrickwalls) |
-| February 1 | Git and GitHub Basics | | [@patrickwalls](https://github.com/patrickwalls) |
+| Date | Topic | Notebook |
+| :---: | :---: | :---: |
+| January 25 | Introduction to Open Source Software (and SymPy) | [Intro to OSS](notes-week-01/introduction-to-oss.ipynb) and [Intro to SymPy](notes-week-01/introduction-to-sympy.ipynb) |
+| February 1 | | |
 | February 8 |  | | |
 | February 15 |  | | |
 | February 22 | *Reading Break*  | |
