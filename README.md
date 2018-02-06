@@ -15,18 +15,18 @@ We use free open source software in our data science, machine learning and scien
 
 #### SCHEDULE
 
-Our open source software seminar meets every **Tuesday 4-5pm in LSK 121**. Please join the [UBCS3 mailing list](https://ubc.ca1.qualtrics.com/jfe/form/SV_6VCa1EYL5xjlUQ5) to receive weekly updates about the seminar.
+Our open source software seminar meets every **Thursday 4-5pm in LSK 121**. Please join the [UBCS3 mailing list](https://ubc.ca1.qualtrics.com/jfe/form/SV_6VCa1EYL5xjlUQ5) to receive weekly updates about the seminar.
 
 | Date | Topic | Notebook |
 | :---: | :---: | :---: |
 | January 25 | Introduction to Open Source Software (and SymPy) | [Intro to OSS](notes-week-01/introduction-to-oss.ipynb) and [Intro to SymPy](notes-week-01/introduction-to-sympy.ipynb) |
 | January 30 | Introduction to Git and GitHub | |
-| February 6 |  | | |
-| February 13 |  | | |
-| February 20 | *Reading Break*  | |
-| February 27 |  | | |
-| March 6 |  |  | |
-| March 13 |  | | |
-| March 20 |  | | |
-| March 27 |  | | |
-| April 3 |  | | |
+| February 8 | GitHub Workflow | | |
+| February 15 |  | | |
+| February 22 | *Reading Break*  | |
+| March 1 |  | | |
+| March 8 |  |  | |
+| March 15 |  | | |
+| March 22 |  | | |
+| March 29 |  | | |
+| April 5 |  | | |
