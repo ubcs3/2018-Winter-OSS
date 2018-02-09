@@ -1,0 +1,212 @@
+Colin's notes on Git
+====================
+
+Getting started
+---------------
+
+We often host git repos on either bitbucket or the [Math Dept gitlab
+server](https://gitlab.math.ubc.ca).  Public code is on github.
+
+
+Math dept Server
+----------------
+
+Log in with a webbrowser at https://gitlab.math.ubc.ca
+
+This needs to be done before the person can be added to a project (I
+think).
+
+
+Using HTTPS
+-----------
+
+Get the "HTTPS" link from your webbrowser from the URL above.
+
+git clone <PASTE THE LINK HERE>
+
+for example:
+
+git clone https://gitlab.math.ubc.ca/cbm/math405_2017.git
+
+
+You can make git remember your username/password like this:
+
+git config --global credential.helper "cache --timeout=3600000"
+
+(hopefully this is not required in 2018!)
+
+
+
+Using SSH keys (optional)
+-------------------------
+
+Alternatively to https, you can setup an ssh key.  Go to "profile" and
+follow the instructions to add an "SSH Public key".  You'll need to do
+this (I think) for each machine that you want to use to access the
+repo.  Then you can use the "git://" style links.
+
+
+
+Client Software
+---------------
+
+Linux and Mac OS X: probably just use the command line tools.
+
+Windows: Craig Hull recommended http://www.sourcetreeapp.com.  I
+haven't tried it.  Github has a client too but not sure if its
+designed for interaction with github only.
+
+
+Simple usage
+============
+
+Starting work, we want to get the latest changes from the server
+# git fetch
+# git merge origin/master
+Now we do some editing.  To see our changes:
+# git status
+# git diff
+When you're ready to add the changes to the history (e.g., finished
+working on this for now, have a bug fix, etc)
+# git add [filename]
+This adds the file to a "staging area".  Then do
+# git commit
+and provide a commit message (see below for how to do this).  So far
+everything local.  To push the changes to the server:
+# git push origin master
+
+
+Writing the commit message
+--------------------------
+
+"git commit" will open a text editor.  Unforunately, this might
+default to "vi" which is confusing if you've never used it.  Type your
+message (e.g., "I fixed everything, world peace achieved") and figure
+out how to save and quit.  (If you have a favourite text editor, you
+can use that instead by setting the "EDITOR" variable in your .bashrc
+file, something like "export EDITOR=nano".)
+
+It might be easiest when beginning to avoid this by using:
+
+  >> git commit -m "fixed the thing and the other thing"
+
+
+
+Looking at changes
+------------------
+
+After updating from server (git fetch, etc) I usually want to see
+what has changed:
+# git log
+And to see exactly what the last change did:
+# git diff HEAD~1
+Think of that as "now minus 1" with tilde for minus (for some reason).
+You can also compare two different points in history using their
+SHA-256 strings (the long hexidecimal numbers)
+# git diff abc123 def456
+
+
+Commit some changes from a file
+-------------------------------
+
+I like to add changes by looking at the diffs, one change at a time.
+I use "git add -p -i" for this and I like this workflow (I can see
+exactly what I am committing).
+
+
+
+Some notes on my personal Git workflow
+======================================
+
+These are just opinions, probably you can quickly learn more than me
+and do what you like...
+
+
+Don't use "git push" alone
+--------------------------
+
+When pushing, I always specify my branch explicitly:
+# git push origin master
+# git push origin mybranch1
+
+
+Don't use "git pull", fetch instead
+-----------------------------------
+
+I like to see what is happening at each step so I rarely use "git
+pull" directly.
+
+# git fetch
+# git status
+
+Now if it says "fast-forward possible", do:
+
+# git merge origin/master
+
+(or "git pull"; they are the same thing in this case).
+
+On the other hand, if "your branch and origin/master have diverged",
+then a merge may not be what you want.  This usually means someone has
+committed and pushed something else since you made your changes.  Its
+probably fine to go ahead an do the merge.  But in some cases, you
+might want to "rebase" your changes, rewriting history so your changes
+happen after the other ones.
+
+# git rebase -i origin/master
+
+(a rebase is dangerous: here it is somewhat safe on your local branch:
+you're changing the SHA numbers associated with your newests commits
+but no one else is using those yet).
+
+At any time during this, you can also use diff to see what is changed:
+# git diff master origin/master
+
+More generally, if you're on another branch it might be "foo" and
+"origin/foo" instead of origin/master.
+
+
+Dealing with Conflicts
+======================
+
+Sometimes, if two people modify the same place in the same file, git
+cannot merge automatically and the merge will fail.  It then leaves
+something like this in the file itself:
+
+   >>>>>>>>>>
+   my stuff is here
+   ==========
+   their change is here
+   <<<<<<<<<<
+
+You need to manually edit the file and pick your's on their's.  And
+delete the `>>>>>>`, `======`, `<<<<<<` lines.  There are some tools like
+"meld" that can help with this: I found them confusing; YMMV.
+
+Then "git status", and follow the instructions, but should be:
+
+# git add the_changed_file.txt
+# git commit
+# git merge origin/master
+
+Then you *should* be "4 commits ahead of origin/master" in "git
+status".  Then you can "git push origin master".
+
+If its more complicated, go look on Google.
+
+
+Misc
+----
+there is a fast forward only command line option: "--ff-only", can
+be helpful to avoid accidental merges.
+
+
+Deleting files
+--------------
+
+Easiest is to use "git rm meh.txt" instead of deleting the file.  Then "git commit" will remove it.
+
+
+Moving Files
+------------
+
+Again, easiest is "git mv meh.txt new_file.txt", then "git commit".
