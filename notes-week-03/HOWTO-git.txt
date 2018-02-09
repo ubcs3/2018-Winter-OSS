@@ -1,5 +1,5 @@
-Colin's notes on Git
-====================
+Colin's awesome amazing notes on Git
+============================ =  = ==
 
 Getting started
 ---------------
@@ -24,7 +24,6 @@ Get the "HTTPS" link from your webbrowser from the URL above.
 
 git clone <PASTE THE LINK HERE>
 
-for example:
 
 git clone https://gitlab.math.ubc.ca/cbm/math405_2017.git
 
@@ -34,7 +33,6 @@ You can make git remember your username/password like this:
 git config --global credential.helper "cache --timeout=3600000"
 
 (this is still required in 2018!)
-
 
 
 Using SSH keys (optional)
