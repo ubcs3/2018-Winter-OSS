@@ -33,7 +33,7 @@ You can make git remember your username/password like this:
 
 git config --global credential.helper "cache --timeout=3600000"
 
-(hopefully this is not required in 2018!)
+(this is still required in 2018!)
 
 
 
