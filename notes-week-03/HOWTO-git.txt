@@ -45,6 +45,7 @@ be called "origin".
 
     You should have two remotes, one called "origin" and "MyUserName".
 
+TODO: maybe add some links to the Sympy developers guide here?
 
 
 Github: how to do a pull request
