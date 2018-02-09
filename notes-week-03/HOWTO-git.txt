@@ -191,7 +191,7 @@ Then "git status", and follow the instructions, but should be:
 Then you *should* be "4 commits ahead of origin/master" in "git
 status".  Then you can "git push origin master".
 
-If its more complicated, go look on Google.
+If it's more complicated, go look on Google.
 
 
 Misc
