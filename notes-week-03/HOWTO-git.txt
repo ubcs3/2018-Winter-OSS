@@ -17,6 +17,56 @@ This needs to be done before the person can be added to a project (I
 think).
 
 
+Github: and which fork should I clone when?
+-------------------------------------------
+
+Here's one suggested workflow that I find works well if you're going
+to make pull requests against a project.  If you only want to use a
+project without contributing then only step 1 is required.
+
+1.  Clone the central/main/canonical repo first.  This ensures it will
+be called "origin".
+
+    >> git clone https://github.com/sympy/sympy
+
+2.  Fork the repo: go to the github website, say https://github.com/sympy.  Login and click "fork".
+
+3.  Go to the newly forked website https://github.com/MyUserName/sympy
+
+4.  Copy the link found under the "clone" button.
+
+5.  Back in your terminal, do:
+
+    >> git remote add MyUserName https://github.com/MyUserName/sympy
+
+6.  Now type:
+
+    >> git remote -v
+
+    You should have two remotes, one called "origin" and "MyUserName".
+
+TODO: maybe add some links to the Sympy developers guide here?
+
+
+Github: how to do a pull request
+--------------------------------
+
+TODO: flesh this out?
+
+1.  "git branch -b my_cool_change"
+
+2.  Make you change
+
+3.  Commit your change
+
+4.  "git push -u my_user_name my_cool_change"
+
+5.  Go to github, to your fork and create a pull request onto
+    the main project.
+
+
+
+
 Using HTTPS
 -----------
 
