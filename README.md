@@ -22,7 +22,7 @@ Our open source software seminar meets every **Thursday 4-5pm in LSK 121**. Plea
 | January 25 | Introduction to Open Source Software (and SymPy) | [Intro to OSS](notes-week-01/introduction-to-oss.ipynb) and [Intro to SymPy](notes-week-01/introduction-to-sympy.ipynb) |
 | January 30 | Introduction to Git and GitHub | |
 | February 8 | GitHub Workflow | | |
-| February 15 |  | | |
+| February 15 | *No meeting* | | |
 | February 22 | *Reading Break*  | |
 | March 1 |  | | |
 | March 8 |  |  | |
